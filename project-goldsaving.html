@@ -441,6 +441,30 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
   pointer-events:none;
 }
 .footer-inner{position:relative;z-index:1;}
+.footer-top-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:40px;
+  align-items:center;
+}
+.footer-signature{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  text-align:right;
+  font-family:var(--display);
+  font-weight:700;
+  line-height:1.05;
+  font-size:clamp(2.2rem, 5.5vw, 4.6rem);
+  color:var(--text);
+  opacity:0.1;
+  user-select:none;
+  white-space:nowrap;
+}
+@media (max-width:900px){
+  .footer-top-row{grid-template-columns:1fr;}
+  .footer-signature{align-items:flex-start;text-align:left;margin-top:24px;opacity:0.08;}
+}
 .footer-cta{margin:20px 0 90px;}
 .footer-cta h2{
   font-size:clamp(1.8rem, 4.2vw, 3rem);
@@ -700,15 +724,15 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html#top" class="logo" data-cursor-hover aria-label="Thiwakorn Reanluk">
+    <a href="portfolio.html#top" class="logo" data-cursor-hover aria-label="Thiwakorn Reanluk">
       <span class="logo-mark">T.</span>
-      <span class="logo-meta">PORTFOLIO / 2026</span>
+      <span class="logo-meta">Thiwakorn R.</span>
     </a>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle" data-cursor-hover aria-label="Toggle light/dark theme" type="button">
         <i class="fa-solid" id="themeIcon">&#xf186;</i>
       </button>
-      <a href="index.html#contact" class="btn-outline" data-cursor-hover>
+      <a href="portfolio.html#contact" class="btn-outline" data-cursor-hover>
         <span class="dot-live"></span> Get in touch
       </a>
     </div>
@@ -718,7 +742,7 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 <main>
 
   <div class="crumb container" data-reveal>
-    <a href="index.html#works" class="crumb-link" data-cursor-hover>
+    <a href="portfolio.html#works" class="crumb-link" data-cursor-hover>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 18l-6-6 6-6"/></svg>
       Back to all work
     </a>
@@ -859,11 +883,14 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
   <footer class="site-footer" id="contact">
     <div class="footer-glow" aria-hidden="true"></div>
     <div class="container footer-inner">
-      <div class="section-head" data-reveal>
+      <div class="footer-top-row">
+        <div class="footer-left">
+          <div class="section-head" data-reveal>
         <span class="index-no">06</span>
         <h2 class="section-title">Contact</h2>
       </div>
-      <div class="footer-cta" data-reveal>
+
+          <div class="footer-cta" data-reveal>
         <h2>Let's build something<br>worth using<span class="blink-cursor">_</span></h2>
         <div class="footer-links">
           <a href="mailto:thiwakorn.dezaina@gmail.com" class="term-btn" data-cursor-hover>
@@ -880,6 +907,14 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
           </a>
         </div>
       </div>
+        </div>
+
+        <div class="footer-signature" data-reveal aria-hidden="true">
+          <span>Thiwakorn</span>
+          <span>Gun</span>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <span>©2026 Thiwakorn Reanluk</span>
         <span class="footer-status"><span class="dot-live"></span> Bangkok, Thailand</span>
