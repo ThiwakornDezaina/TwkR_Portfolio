@@ -160,6 +160,30 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 .logo{display:flex;align-items:baseline;gap:12px;}
 .logo-mark{font-family:var(--display);font-weight:700;font-size:1.4rem;color:var(--text);}
 .logo-meta{font-family:var(--mono);font-size:0.72rem;color:var(--text-mute);letter-spacing:0.08em;}
+
+.main-nav{display:flex;align-items:center;gap:32px;}
+.main-nav a{
+  font-family:var(--mono);
+  font-size:0.85rem;
+  color:var(--text-mute);
+  position:relative;
+  transition:color .2s ease;
+}
+.main-nav a::after{
+  content:'';
+  position:absolute;
+  left:0;right:0;bottom:-6px;
+  height:1px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease;
+}
+.main-nav a:hover{color:var(--text);}
+.main-nav a:hover::after{transform:scaleX(1);}
+@media (max-width:760px){
+  .main-nav{display:none;}
+}
 .btn-outline{
   display:inline-flex;align-items:center;gap:10px;
   padding:11px 20px;
@@ -728,6 +752,11 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
       <span class="logo-mark">T.</span>
       <span class="logo-meta">Thiwakorn R.</span>
     </a>
+    <nav class="main-nav">
+      <a href="index.html#works" data-cursor-hover>Works</a>
+      <a href="index.html#about" data-cursor-hover>About</a>
+      <a href="index.html#contact" data-cursor-hover>Contact</a>
+    </nav>
     <div class="header-actions">
       <button class="theme-toggle" id="themeToggle" data-cursor-hover aria-label="Toggle light/dark theme" type="button">
         <i class="fa-solid" id="themeIcon">&#xf186;</i>
