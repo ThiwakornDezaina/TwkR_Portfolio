@@ -537,6 +537,8 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 .meta-value{font-size:1rem;color:var(--text);}
 
 .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;}
+.gallery-grid.single{grid-template-columns:minmax(180px,280px);}
+.gallery-item.is-detail img{object-fit:contain;max-height:420px;padding:20px 0;}
 .gallery-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--bg-soft);}
 .gallery-item img{width:100%;max-height:460px;display:block;object-fit:cover;object-position:top;background:#fff;}
 .gallery-cap{padding:14px 18px;font-family:var(--mono);font-size:0.78rem;color:var(--text-mute);border-top:1px solid var(--border);}
@@ -645,6 +647,49 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
   .pg-role{margin-left:0;}
 }
 
+/* ---------- project color palette ---------- */
+.palette-row{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.swatch{
+  width:150px;
+  height:210px;
+  border-radius:16px;
+  position:relative;
+  flex-shrink:0;
+  transition:transform .25s ease;
+}
+.swatch:hover{transform:translateY(-4px);}
+.swatch.has-border{border:1px solid var(--border-strong);}
+.swatch-name{
+  position:absolute;
+  left:16px;
+  bottom:16px;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  font-family:var(--display);
+  font-weight:600;
+  font-size:0.92rem;
+}
+.swatch-hex{
+  position:absolute;
+  right:16px;
+  bottom:16px;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  font-family:var(--mono);
+  font-size:0.72rem;
+  opacity:0.75;
+  letter-spacing:0.04em;
+}
+
+@media (max-width:520px){
+  .swatch{width:120px;height:170px;}
+}
+
 </style>
 </head>
 <body>
@@ -731,6 +776,43 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
   <section class="proj-section container">
     <div class="section-head" data-reveal>
       <span class="index-no">03</span>
+      <h2 class="section-title">Color Palette</h2>
+    </div>
+    <div class="palette-row" data-reveal>
+      <div class="swatch" style="background:#8D0200;color:#ffffff;">
+        <span class="swatch-name">Color 01</span>
+        <span class="swatch-hex">8D0200</span>
+      </div>
+      <div class="swatch" style="background:#FA1100;color:#ffffff;">
+        <span class="swatch-name">Color 02</span>
+        <span class="swatch-hex">FA1100</span>
+      </div>
+      <div class="swatch" style="background:#1DBD03;color:#ffffff;">
+        <span class="swatch-name">Color 03</span>
+        <span class="swatch-hex">1DBD03</span>
+      </div>
+      <div class="swatch" style="background:#F4F4F4;color:#1a1a1a;">
+        <span class="swatch-name">Color 04</span>
+        <span class="swatch-hex">F4F4F4</span>
+      </div>
+      <div class="swatch" style="background:#000000;color:#ffffff;">
+        <span class="swatch-name">Color 05</span>
+        <span class="swatch-hex">000000</span>
+      </div>
+      <div class="swatch has-border" style="background:#FFFFFF;color:#1a1a1a;">
+        <span class="swatch-name">Color 06</span>
+        <span class="swatch-hex">FFFFFF</span>
+      </div>
+      <div class="swatch" style="background:#FAB700;color:#1a1a1a;">
+        <span class="swatch-name">Color 07</span>
+        <span class="swatch-hex">FAB700</span>
+      </div>
+      </div>
+  </section>
+
+  <section class="proj-section container">
+    <div class="section-head" data-reveal>
+      <span class="index-no">04</span>
       <h2 class="section-title">Additional Screens</h2>
     </div>
     <div class="gallery-grid" data-reveal>
@@ -755,7 +837,7 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 
   <section class="proj-section container">
     <div class="section-head" data-reveal>
-      <span class="index-no">04</span>
+      <span class="index-no">05</span>
       <h2 class="section-title">Reflection</h2>
     </div>
     <div class="proj-body" data-reveal>
