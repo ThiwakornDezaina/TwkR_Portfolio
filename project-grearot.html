@@ -715,6 +715,31 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 }
 
 
+
+/* ---------- typography spec ---------- */
+.typo-block{margin-top:8px;}
+.typo-heading{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(1.5rem,4vw,2rem);
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  margin-bottom:32px;
+}
+.typo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px 48px;}
+.typo-font-name{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--text);}
+.typo-lang{font-family:var(--mono);font-size:0.78rem;color:var(--accent-2);letter-spacing:0.06em;margin-top:4px;}
+.typo-platforms{display:flex;flex-wrap:wrap;gap:32px;margin-top:24px;}
+.typo-platform{min-width:130px;}
+.typo-platform-name{font-family:var(--display);font-weight:700;font-size:0.9rem;color:var(--text);margin-bottom:8px;}
+.typo-sizes{font-family:var(--mono);font-size:0.8rem;color:var(--accent-2);}
+.typo-weights{font-family:var(--mono);font-size:0.76rem;color:var(--accent);margin-top:4px;line-height:1.5;}
+.colors-label{display:block;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;color:var(--text-mute);margin:48px 0 16px;}
+
 /* ---------- story images + lightbox ---------- */
 .story-img{
   margin-top:24px;
@@ -817,7 +842,7 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
   <section class="proj-section container">
     <div class="section-head" data-reveal>
       <span class="index-no">01</span>
-      <h2 class="section-title">Client's Request</h2>
+      <h2 class="section-title">Problem</h2>
     </div>
     <div class="proj-body" data-reveal>
       <p>The client wanted to develop a mobile-first web application that helps users manage and monitor their farming activities in one place.</p>
@@ -835,19 +860,6 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
   <section class="proj-section container">
     <div class="section-head" data-reveal>
       <span class="index-no">02</span>
-      <h2 class="section-title">This Solution</h2>
-    </div>
-    <div class="proj-body" data-reveal>
-      <p>I designed the UX/UI for the mobile-first web application, focusing on the core user journey from onboarding and setting up a growing area to managing cultivation activities.</p>
-      <p>The experience allows users to select the type of growing environment they manage, such as a garden, field, farm, or greenhouse, and then manage the corresponding cultivation activities. I also incorporated the concept of IoT-based tracking into the experience to support monitoring through InnoBean's connected devices.</p>
-      <p>To support users beyond basic farm management, I designed educational content and problem-solving guidance as part of the experience. For example, when users encounter issues with their plants, the platform can provide relevant cultivation knowledge to help them understand and address the problem.</p>
-      <p>The homepage also includes a cultivation-focused content feed, allowing users to learn and discover useful information while using the platform.</p>
-    </div>
-  </section>
-
-  <section class="proj-section container">
-    <div class="section-head" data-reveal>
-      <span class="index-no">03</span>
       <h2 class="section-title">Goal</h2>
     </div>
     <div class="proj-body" data-reveal>
@@ -862,7 +874,7 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 
   <section class="proj-section container">
     <div class="section-head" data-reveal>
-      <span class="index-no">04</span>
+      <span class="index-no">03</span>
       <h2 class="section-title">Challenge</h2>
     </div>
     <div class="proj-body" data-reveal>
@@ -874,9 +886,39 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
 
   <section class="proj-section container">
     <div class="section-head" data-reveal>
-      <span class="index-no">05</span>
-      <h2 class="section-title">Color Palette</h2>
+      <span class="index-no">04</span>
+      <h2 class="section-title">Design Approach</h2>
     </div>
+    <div class="proj-body" data-reveal>
+      <p>I designed the UX/UI for the mobile-first web application, focusing on the core user journey from onboarding and setting up a growing area to managing cultivation activities.</p>
+      <p>The experience allows users to select the type of growing environment they manage, such as a garden, field, farm, or greenhouse, and then manage the corresponding cultivation activities. I also incorporated the concept of IoT-based tracking into the experience to support monitoring through InnoBean's connected devices.</p>
+      <p>To support users beyond basic farm management, I designed educational content and problem-solving guidance as part of the experience. For example, when users encounter issues with their plants, the platform can provide relevant cultivation knowledge to help them understand and address the problem.</p>
+      <p>The homepage also includes a cultivation-focused content feed, allowing users to learn and discover useful information while using the platform.</p>
+    </div>
+  </section>
+
+  <section class="proj-section container">
+    <div class="section-head" data-reveal>
+      <span class="index-no">05</span>
+      <h2 class="section-title">Typography & Colors</h2>
+    </div>
+    <div class="typo-block" data-reveal>
+      <h3 class="typo-heading">Typography</h3>
+      <div class="typo-grid">
+        <div class="typo-font">
+          <div class="typo-font-name">Prompt</div>
+          <div class="typo-lang">TH</div>
+          <div class="typo-platforms">
+            <div class="typo-platform">
+              <div class="typo-platform-name">Web-App</div>
+              <div class="typo-sizes">24, 16, 14, 12 px</div>
+              <div class="typo-weights">Semibold, Bold, Regular</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="colors-label">COLORS</span>
     <div class="palette-row" data-reveal>
       <div class="swatch" style="background:#36D16C;color:#1a1a1a;">
         <span class="swatch-name">Color 01</span>
@@ -896,6 +938,7 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
       </div>
       </div>
   </section>
+
 
 
   <div class="proj-nav container">
