@@ -757,8 +757,10 @@ html[data-theme="light"] .site-header{background:rgba(244,246,249,0.78);}
   margin-top:24px;
   max-width:640px;
 }
-.story-img-row-wide{max-width:100%;}
+.story-img-row-wide{max-width:100%;align-items:flex-start;}
 .story-img-row .story-img{margin-top:0;flex:1;max-width:none;}
+.story-img-row-wide .story-img{flex:0 0 auto;}
+.story-img-row-wide .story-img img{width:auto;height:auto;max-height:420px;max-width:100%;}
 .img-lightbox{
   position:fixed;inset:0;z-index:200;
   display:flex;align-items:center;justify-content:center;
